@@ -13,7 +13,7 @@ const Header = () => {
 
         <div className="flex gap-x-6">
           <Link href="/admin/orders">
-            <Bell color="#042A38"/>
+            <Bell color="#042A38" />
           </Link>
           <MenuDropdown />
         </div>
