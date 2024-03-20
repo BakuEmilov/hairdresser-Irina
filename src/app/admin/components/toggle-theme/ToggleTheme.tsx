@@ -25,15 +25,15 @@ const ToggleTheme = () => {
 
   return (
     <div
-      className="relative w-16 h-8 flex items-center dark:bg-gray-900 bg-teal-500 cursor-pointer rounded-full p-1"
+      className="relative w-16 h-8 flex items-center dark:bg-[#E2E2E2] shadow-md bg-[#042A38] cursor-pointer rounded-full p-1"
       onClick={() => setDarkMode(!darkMode)}
     >
       <Moon className="text-white" size={19} />
       <div
-        className="absolute bg-white w-6 h-6 rounded-full shadow-md transform transition-transform duration-300"
+        className="absolute bg-white w-6 h-6 rounded-full shadow-xl transform transition-transform duration-300"
         style={darkMode ? { left: "2px" } : { right: "2px" }}
       ></div>
-      <Sun className="ml-auto text-yellow-400" size={19}/>
+      <Sun className="ml-auto" size={19}/>
     </div>
   );
 };

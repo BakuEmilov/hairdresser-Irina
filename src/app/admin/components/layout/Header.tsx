@@ -7,23 +7,23 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <nav>
-      <div className="flex justify-between border-b border-black p-2">
+    <nav className=" bg-[#E2E2E2] shadow-md">
+      <div className="flex justify-between p-2 ">
         <ToggleTheme />
 
         <div className="flex gap-x-6">
           <Link href="/admin/orders">
-            <Bell />
+            <Bell color="#042A38" />
           </Link>
           <MenuDropdown />
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-5 py-2 border-b border-black">
+      <div className="flex items-center justify-between rounded-lg m-4 py-4">
         <Image
           src={Profile}
           alt="profile"
-          className="border border-black w-[80px] h-[80px]"
+          className="shadow-md rounded-lg w-[80px] h-[80px]"
         />
         <h1 className="dark:text-[red]">Парикмахер Ирина</h1>
       </div>

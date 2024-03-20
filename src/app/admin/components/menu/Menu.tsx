@@ -1,6 +1,6 @@
 "use client";
 
-import Modal from "@/ui/modal-window/Modal";
+import ModalWindow from "@/ui/modal/ModalWindow";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
@@ -21,9 +21,9 @@ const MenuDropdown = () => {
     <div>
       <Menu>
         <MenuButton>
-          <AlignJustify />
+          <AlignJustify color="#042A38" />
         </MenuButton>
-        <MenuList className="bg-white border border-black px-4 py-2 leading-loose">
+        <MenuList className="bg-white shadow-md rounded-lg px-4 py-2 leading-loose">
           <MenuItem className="text-[14px]">
             <Link href="/admin/settings">Настройки</Link>
           </MenuItem>
@@ -32,7 +32,7 @@ const MenuDropdown = () => {
           </MenuItem>
         </MenuList>
       </Menu>
-      <Modal open={openModal} onClose={closeModal} />
+      <ModalWindow isOpen={openModal} onClose={closeModal} />
     </div>
   );
 };

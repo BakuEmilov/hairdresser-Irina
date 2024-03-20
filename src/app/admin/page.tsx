@@ -5,7 +5,7 @@ import Information from "./components/layout/Information";
 const AdminPage = () => {
   return (
     <AdminLayout>
-      <Information/>
+      <Information />
     </AdminLayout>
   );
 };
