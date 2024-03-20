@@ -3,6 +3,7 @@ import Image from "next/image";
 import Profile from "../../../../../public/assets/profile.jpg";
 import MenuDropdown from "../menu/Menu";
 import ToggleTheme from "../toggle-theme/ToggleTheme";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -11,7 +12,9 @@ const Header = () => {
         <ToggleTheme />
 
         <div className="flex gap-x-6">
-          <Bell />
+          <Link href="/admin/orders">
+            <Bell />
+          </Link>
           <MenuDropdown />
         </div>
       </div>
