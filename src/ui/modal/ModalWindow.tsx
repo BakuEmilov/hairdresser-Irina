@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Button,
   Modal,
@@ -9,6 +8,7 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
+import React from "react";
 
 type IMOdal = {
   isOpen: boolean;
@@ -16,30 +16,26 @@ type IMOdal = {
 };
 
 const ModalWindow = ({ isOpen, onClose }: IMOdal) => {
-  if (!open) return null;
-
   return (
-    <div className="">
+    <div>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent
-          className="bg-white p-4 m-4 fixed rounded-lg"
-          w="500px"
-          h="200"
-        >
+        <ModalContent className="p-4 m-4 bg-white rounded-lg" w={500} h={200}>
           <div className="flex justify-between items-center">
             <ModalHeader>Выйти</ModalHeader>
             <ModalCloseButton />
           </div>
-          <ModalBody mt={40} mb={40}>
-            <p>еу, может передумаешь?</p>
+          <ModalBody pt="40" pb="40">
+            <p>ey, может передумаешь?</p>
           </ModalBody>
 
           <ModalFooter>
             <Button colorScheme="blue" mr={10} onClick={onClose}>
               Нет
             </Button>
-            <Button variant="ghost" onClick={onClose}>Хорошо</Button>
+            <Button variant="ghost" onClick={onClose}>
+              Хорошо
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
