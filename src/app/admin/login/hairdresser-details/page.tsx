@@ -32,7 +32,7 @@ const HairdresserDetails = () => {
   return (
     <div>
       <div className="flex items-center justify-center h-screen">
-        <Card className="w-[500px]">
+        <Card className="w-[350px] lg:w-[500px]">
           <CardHeader className="text-center">
             <CardTitle>О вас</CardTitle>
           </CardHeader>
@@ -41,14 +41,14 @@ const HairdresserDetails = () => {
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="name">Ваш адрес</Label>
-                  <div className="grid grid-cols-12 gap-x-4">
-                    <Input className="col-span-8" id="address" />
-                    <Input className="col-span-4" id="address" type="number" />
+                  <div className="grid grid-cols-8 lg:grid-cols-12 gap-x-4 ">
+                    <Input className="col-span-5 lg:col-span-8" id="address" />
+                    <Input
+                      className="col-span-3 lg:col-span-4"
+                      id="address"
+                      type="number"
+                    />
                   </div>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="name">График работы</Label>
-                  <InputOtp />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="name">Выходной день</Label>
@@ -64,6 +64,10 @@ const HairdresserDetails = () => {
                       ))}
                     </SelectContent>
                   </Select>
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                  <Label htmlFor="name">График работы</Label>
+                  <InputOtp />
                 </div>
               </div>
             </form>

@@ -12,7 +12,6 @@ const Header = () => {
       <AvatarProfile />
 
       <div className="flex gap-x-6">
-
         <ModalWindow />
 
         <MenuDropdown className="mt-[9px]" />
