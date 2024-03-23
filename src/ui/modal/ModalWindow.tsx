@@ -18,7 +18,7 @@ const ModalWindow = () => {
         <AlertDialogTrigger asChild>
           <Button>Выйти</Button>
         </AlertDialogTrigger>
-        <AlertDialogContent className="bg-white">
+        <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Вы точно хотите выйти?</AlertDialogTitle>
             <AlertDialogDescription>
@@ -29,7 +29,7 @@ const ModalWindow = () => {
             <AlertDialogCancel className="border-none">
               Отмена
             </AlertDialogCancel>
-            <AlertDialogAction className="bg-[#E2E2E2] hover:bg-[#F1828D]">
+            <AlertDialogAction>
               Выйти
             </AlertDialogAction>
           </AlertDialogFooter>

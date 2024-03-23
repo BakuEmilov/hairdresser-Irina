@@ -18,7 +18,7 @@ const MenuDropdown = ({ className }: IMenuDropdown) => {
         <DropdownMenuTrigger>
           <AlignJustify />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-white mr-2">
+        <DropdownMenuContent className="mr-2">
           <DropdownMenuItem>
             <Link href="/admin/settings" className="font-medium">
               Профиль
