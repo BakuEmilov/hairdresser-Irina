@@ -58,7 +58,7 @@ const HairdresserDetails = () => {
                     </SelectTrigger>
                     <SelectContent position="popper">
                       {weeks.map((week) => (
-                        <SelectItem key="value" value={week.value}>
+                        <SelectItem key={week.value} value={week.value}>
                           {week.label}
                         </SelectItem>
                       ))}

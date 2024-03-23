@@ -8,13 +8,10 @@ import AvatarProfile from "@/ui/avatar/AvatarProfile";
 
 const Header = () => {
   return (
-    <nav className="bg-[#E2E2E2] shadow-md p-2 flex items-center justify-between">
+    <nav className="shadow-md p-2 flex items-center justify-between">
       <AvatarProfile />
 
       <div className="flex gap-x-6">
-        <Link href="/admin/orders">
-          <Bell className="mt-[9px]" />
-        </Link>
 
         <ModalWindow />
 
