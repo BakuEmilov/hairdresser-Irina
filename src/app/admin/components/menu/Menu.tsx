@@ -1,38 +1,31 @@
-"use client";
-
-import ModalWindow from "@/ui/modal/ModalWindow";
-import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-const MenuDropdown = () => {
-  const [openModal, setOpenModal] = useState(false);
+type IMenuDropdown = {
+  className?: string;
+};
 
-  const handleLogout = () => {
-    setOpenModal(true);
-  };
-
-  const closeModal = () => {
-    setOpenModal(false);
-  };
-
+const MenuDropdown = ({ className }: IMenuDropdown) => {
   return (
-    <div>
-      <Menu>
-        <MenuButton>
-          <AlignJustify color="#042A38" />
-        </MenuButton>
-        <MenuList className="bg-white shadow-md rounded-lg px-4 py-2 leading-loose">
-          <MenuItem className="text-[14px]">
-            <Link href="/admin/settings">Настройки</Link>
-          </MenuItem>
-          <MenuItem onClick={handleLogout} className="text-[14px]">
-            Выйти
-          </MenuItem>
-        </MenuList>
-      </Menu>
-      <ModalWindow isOpen={openModal} onClose={closeModal} />
+    <div className={className}>
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <AlignJustify />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="mr-2">
+          <DropdownMenuItem>
+            <Link href="/admin/settings" className="font-medium">
+              Профиль
+            </Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 };
