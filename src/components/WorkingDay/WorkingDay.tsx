@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
+import React, { FC } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 
@@ -38,7 +38,6 @@ const WorkingDay = () => {
     },
   ]
 
-
   return (
     <div className='flex items-center justify-center h-screen'>
       <Card className='w-[400px]'>
@@ -68,4 +67,4 @@ const WorkingDay = () => {
   )
 }
 
-export default WorkingDay
+export default WorkingDay;
