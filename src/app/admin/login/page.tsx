@@ -13,7 +13,7 @@ import Link from "next/link";
 const LoginAdmin = () => {
   return (
     <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+      <Card className="w-[350px] lg:w-[400px]">
         <CardHeader className="text-center">
           <CardTitle>Регистрация</CardTitle>
         </CardHeader>
