@@ -3,7 +3,8 @@ import AdminLayout from "./components/layout/AdminLayout";
 
 const AdminPage = () => {
   return (
-    <AdminLayout></AdminLayout>
+    <AdminLayout>
+    </AdminLayout>
   );
 };
 
