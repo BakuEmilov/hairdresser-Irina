@@ -1,10 +1,11 @@
 "use client"
 
+import React from 'react'
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import React from 'react'
+import Link from 'next/link';
 
 const Recording = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
@@ -32,7 +33,10 @@ const Recording = () => {
           </form>
         </CardContent>
         <CardFooter>
-          <div className='grid place-content-center w-full mt-[40px]'>
+          <div className='flex items-center justify-between w-full mt-[40px]'>
+            <Link href={"/workDay"}>
+              <Button className='bg-red-500 text-white hover:shadow-gray-700'>Назад</Button>
+            </Link>
             <Button className='bg-green-500 text-white'>Записаться</Button>
           </div>
         </CardFooter>
