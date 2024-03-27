@@ -32,7 +32,7 @@ const HairdresserDetails = () => {
   return (
     <div>
       <div className="flex items-center justify-center h-screen">
-        <Card className="w-[350px] lg:w-[500px]">
+        <Card className="w-[380px] lg:w-[500px]">
           <CardHeader className="text-center">
             <CardTitle>О вас</CardTitle>
           </CardHeader>

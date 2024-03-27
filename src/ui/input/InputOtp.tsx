@@ -9,28 +9,28 @@ const InputOtp = () => {
   return (
     <div>
       <InputOTP maxLength={8}>
-        <div className="flex flex-col items-center space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
+        <div className="flex items-center">
           <div className="flex items-center space-x-2">
             <span className="text-[14px] font-medium">От</span>
-            <InputOTPGroup>
+            <InputOTPGroup className="w-[53px] lg:w-full ">
               <InputOTPSlot index={0} />
               <InputOTPSlot index={1} />
             </InputOTPGroup>
             <span className="font-medium">:</span>
-            <InputOTPGroup>
+            <InputOTPGroup className="w-[53px] lg:w-full ">
               <InputOTPSlot index={2} />
               <InputOTPSlot index={3} />
             </InputOTPGroup>
           </div>
-          <InputOTPSeparator className="hidden lg:block" />
+          <InputOTPSeparator />
           <div className="flex items-center space-x-2 lg:mt-0">
             <span className="text-[14px] font-medium">До</span>
-            <InputOTPGroup>
+            <InputOTPGroup className="w-[53px] lg:w-full">
               <InputOTPSlot index={4} />
               <InputOTPSlot index={5} />
             </InputOTPGroup>
             <span className="font-medium">:</span>
-            <InputOTPGroup>
+            <InputOTPGroup className="w-[53px] lg:w-full">
               <InputOTPSlot index={6} />
               <InputOTPSlot index={7} />
             </InputOTPGroup>
