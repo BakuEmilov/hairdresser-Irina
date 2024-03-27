@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Send , Mail, Phone} from 'lucide-react';
 import Link from 'next/link'
 import React from 'react'
 
@@ -14,16 +15,16 @@ const AnotherWay = () => {
           <form>
             <div className="flex items-center justify-between pt-5">
               <Link href="">
-                <Button className='bg-red-500'>+996777776164</Button>
+                <Button className='bg-red-500'><span><Phone className='mr-2'/></span>+996777776164</Button>
               </Link>
               <Link href="">
-                <Button>Получить смс</Button>
+                <Button><span><Mail className='mr-2'/></span>Получить смс</Button>
               </Link>
             </div>
             <div className='w-full text-center'>
               <h2 className='my-4'>ИЛИ</h2>
               <Link href={""}>
-                <Button className='bg-sky-500'>Log in with Telegram</Button>
+                <Button className='bg-sky-500 text-[15px]'><span> <Send className='mr-4'/> </span>Log in with Telegram</Button>
               </Link>
             </div>
           </form>
@@ -33,4 +34,4 @@ const AnotherWay = () => {
   )
 }
 
-export default AnotherWay
+export default AnotherWay;
