@@ -2,13 +2,12 @@
 
 import React from 'react'
 import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { DatePickerDemo } from '@/components/ui/DatePicker';
 import Link from 'next/link';
 
 const Recording = () => {
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
   return (
     <div className='flex items-center justify-center h-screen'>
       <Card className='w-[400px] text-center'>
@@ -18,12 +17,7 @@ const Recording = () => {
         </CardHeader>
         <CardContent>
           <form>
-            <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setDate}
-                className="rounded-md border"
-              />
+            <DatePickerDemo />
             <div className='my-4'>
               <Input placeholder='Имя' id='text'/>
             </div>
