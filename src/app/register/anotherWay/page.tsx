@@ -1,8 +1,8 @@
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Send , Mail, Phone} from 'lucide-react';
 import Link from 'next/link'
-import React from 'react'
 
 const AnotherWay = () => {
   return (

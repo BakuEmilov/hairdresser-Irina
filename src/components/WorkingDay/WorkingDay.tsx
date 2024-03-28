@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import ModalWindow from '@/ui/modal/ModalWindow';
+import GoBack from '../goBack/GoBack';
 
 interface IProps {
   time: string, 
@@ -45,6 +46,7 @@ const WorkingDay = () => {
         <CardHeader className='text-center'>
           <CardTitle>График рабочего дня</CardTitle>
           <h2>Сегодня 26 марта</h2>
+          <GoBack />
         </CardHeader>
         <CardContent>
           <form>
