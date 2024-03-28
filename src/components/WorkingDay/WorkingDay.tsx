@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import ModalWindow from '@/ui/modal/ModalWindow';
 
 interface IProps {
   time: string, 
@@ -52,8 +53,8 @@ const WorkingDay = () => {
                 <div>
                   <div className='flex items-center justify-between my-5'>
                     <p>{item.time}</p>
-                    <Link href={""}>
-                    <Button className={item.link === "Занято" ? "bg-red-500 text-white" : "bg-green-500 text-white"} variant="outline">{item.link}</Button>
+                    <Link href={`${item.link === "Занято" ? "" : "/recording"}`}>
+                      <Button className={item.link === "Занято" ? "bg-red-500 text-white" : "bg-green-500 text-white"} variant="outline">{item.link}</Button>
                     </Link>
                   </div>
                   <div className='w-full h-[1px] bg-black'/>
