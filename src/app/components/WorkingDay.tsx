@@ -4,8 +4,8 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "../../../components/ui/card";
-import { Button } from "../../../components/ui/button";
+} from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 import Link from "next/link";
 
 interface IProps {
@@ -22,8 +22,8 @@ const WorkingDay: FC<IProps> = ({ day, date }) => {
     <div className="flex items-center justify-center mt-[50px] mb-[70px]">
       <Card className="w-[300px]">
         <CardHeader className="text-center">
-          <CardTitle className="text-sm">График рабочего дня</CardTitle>
-          <h2 className="text-sm">Сегодня {date}</h2>
+          <CardTitle className="text-lg">График рабочего дня</CardTitle>
+          <h2>Сегодня {date}</h2>
         </CardHeader>
         <CardContent>
           <form>
@@ -31,7 +31,7 @@ const WorkingDay: FC<IProps> = ({ day, date }) => {
               {day.map((item) => (
                 <div key={item.id}>
                   <div className="flex items-center justify-between my-3">
-                    <p className="text-xs">{item.time}</p>
+                    <p className="text-sm font-medium">{item.time}</p>
                     <Link
                       href={`${item.link === "Занято" ? "" : "/recording"}`}
                     >
@@ -47,7 +47,7 @@ const WorkingDay: FC<IProps> = ({ day, date }) => {
                       </Button>
                     </Link>
                   </div>
-                  <div className="w-full h-[1px] bg-black" />
+                  <div className="w-full h-[1px] bg-[#D9DDDC]" />
                 </div>
               ))}
             </div>
