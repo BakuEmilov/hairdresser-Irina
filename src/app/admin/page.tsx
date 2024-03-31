@@ -5,7 +5,7 @@ import Customers from "./components/customers/Customers";
 const AdminPage = () => {
   return (
     <AdminLayout>
-      <Customers/>
+      <Customers />
     </AdminLayout>
   );
 };

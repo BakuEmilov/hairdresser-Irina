@@ -3,7 +3,7 @@ import ModalWindow from "@/ui/modal/ModalWindow";
 import AvatarProfile from "@/ui/avatar/AvatarProfile";
 import Link from "next/link";
 
-const Header = () => {
+const HeaderAdmin = () => {
   return (
     <nav className="shadow-md p-2 flex items-center justify-between">
       <Link href="/admin">
@@ -19,4 +19,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderAdmin;
