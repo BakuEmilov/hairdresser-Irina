@@ -1,11 +1,17 @@
 "use client";
 
-import React from 'react'
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { DatePickerDemo } from '@/components/ui/DatePicker';
-import Link from 'next/link';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { DatePickerDemo } from "@/components/ui/DatePicker";
+import Link from "next/link";
 
 const Recording = () => {
   return (
@@ -18,8 +24,8 @@ const Recording = () => {
         <CardContent>
           <form>
             <DatePickerDemo />
-            <div className='my-4'>
-              <Input placeholder='Имя' id='text'/>
+            <div className="my-4">
+              <Input placeholder="Имя" id="text" />
             </div>
             <div>
               <Input placeholder="Номер телефона" id="text" />
