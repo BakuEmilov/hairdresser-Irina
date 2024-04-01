@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { DatePickerDemo } from "@/components/ui/DatePicker";
 import Link from "next/link";
 
 const Recording = () => {
@@ -23,7 +22,6 @@ const Recording = () => {
         </CardHeader>
         <CardContent>
           <form>
-            <DatePickerDemo />
             <div className="my-4">
               <Input placeholder="Имя" id="text" />
             </div>
