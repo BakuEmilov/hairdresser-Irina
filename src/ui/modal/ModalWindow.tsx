@@ -10,6 +10,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ModalWindow = () => {
   return (
@@ -29,7 +30,9 @@ const ModalWindow = () => {
             <AlertDialogCancel className="border-none">
               Отмена
             </AlertDialogCancel>
+            <Link href={"/register"}>
             <AlertDialogAction>Выйти</AlertDialogAction>
+            </Link>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
