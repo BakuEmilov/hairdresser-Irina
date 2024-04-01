@@ -5,10 +5,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="max-w-[1100px] mx-auto mt-[10px] lg:mt-[60px] px-4">
+    <div className="max-w-[1100px] mx-auto mt-[60px] pl-8">
       <div className="flex flex-col gap-y-6">
         <h1 className="text-5xl font-semibold">
-          Привет, я парикмахер <span className="text-blue-700">Байыр</span>
+          Привет, я парикмахер <span className="text-[green]">Байыр</span>
         </h1>
         <div className="text-lg font-medium text-gray-700">
           <p>

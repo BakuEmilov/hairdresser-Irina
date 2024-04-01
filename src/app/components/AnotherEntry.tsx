@@ -101,7 +101,7 @@ const AnotherEntry = () => {
           </Select>
 
           <Link href="/recording">
-            <Button variant={"outline"} className="w-[270px]">
+            <Button className="w-[270px]">
               Записаться
             </Button>
           </Link>
