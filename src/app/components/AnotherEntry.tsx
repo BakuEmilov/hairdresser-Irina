@@ -90,7 +90,7 @@ const AnotherEntry = () => {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectGroup>
+              <SelectGroup className="">
                 {clock.map((item) => (
                   <SelectItem value={item.value} key={item.value}>
                     {item.label}
