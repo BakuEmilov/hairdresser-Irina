@@ -41,31 +41,25 @@ const generatePeriodsFor = ({
   workingHours = 8,
   days = 14,
   interval = 60,
+  from: fromH = 9,
 }: {
-  workingHours: number;
-  days: number;
-  interval: number;
+  workingHours?: number;
+  days?: number;
+  interval?: number;
+  from?: number;
 }) => {
-  const start = new Date();
-  start.setHours(9);
-  start.setMinutes(0);
-  start.setSeconds(0);
+  const today = new Date();
+  today.setHours(fromH);
+  today.setMinutes(0);
+  today.setSeconds(0);
 
-  const startingtimes = Array.from({ length: days }, (_, i) => {
-    return fns.addDays(start, i);
-  });
+  const workingDays = Array.from({ length: days }, (_, index) =>
+    fns.addDays(today, index)
+  );
 
-  console.log("asdasd", start, fns.addHours(start, workingHours));
-
-  const fullDay = startingtimes.map((start) => {
-    return generateTimetable(
-      start,
-      fns.addHours(start, workingHours),
-      interval
-    );
-  });
-
-  return fullDay;
+  return workingDays.map((morning) =>
+    generateTimetable(morning, fns.addHours(morning, workingHours), interval)
+  );
 };
 
 const twoWeeks = generatePeriodsFor({
