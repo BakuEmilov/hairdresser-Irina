@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import * as fns from "date-fns";
+import { ru } from "date-fns/locale";
+
+fns.setDefaultOptions({ locale: ru });
 
 const inter = Montserrat({
   subsets: ["latin"],

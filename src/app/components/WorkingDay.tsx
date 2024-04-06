@@ -1,5 +1,4 @@
 import * as fns from "date-fns";
-import { ru } from "date-fns/locale";
 import Link from "next/link";
 import { FC } from "react";
 import { Button } from "../../components/ui/button";
@@ -10,21 +9,22 @@ import {
   CardTitle,
 } from "../../components/ui/card";
 import { Period } from "./WorkingDayCarousel";
-fns.setDefaultOptions({ locale: ru });
 
 interface IProps {
   timetable: Period[];
 }
 
 const WorkingDay: FC<IProps> = ({ timetable }) => {
+  const day = timetable[0].start; // [0] could be any other index, it's all one day
+
   return (
     <div className="flex items-center justify-center mt-[50px] mb-[70px]">
       <Card className="w-full">
         <CardHeader className="text-center">
           <CardTitle className="text-lg">
-            {fns.isToday(timetable[0].start) ? "Cегодня, " : ""}
-            {fns.isTomorrow(timetable[1].start) ? "Завтра, " : ""}
-            {fns.formatDate(timetable[0].start, "c MMMM")}
+            {fns.isToday(day) ? "Cегодня, " : ""}
+            {fns.isTomorrow(day) ? "Завтра, " : ""}
+            {fns.formatDate(day, "c MMMM")}
           </CardTitle>
         </CardHeader>
         <CardContent>
