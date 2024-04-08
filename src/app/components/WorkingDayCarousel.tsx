@@ -2,8 +2,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import WorkingDay from "@/app/components/WorkingDay";
@@ -80,8 +78,6 @@ const WorkingDayCarousel = () => {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-0" />
-      <CarouselNext className="absolute right-0" />
     </Carousel>
   );
 };
