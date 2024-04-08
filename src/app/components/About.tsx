@@ -1,7 +1,7 @@
-import Image from "next/image";
-import HeroImg from "../../../public/assets/hero-img.png";
+import Image from 'next/image'
+import HeroImg from '../../../public/assets/hero-img.png'
 
-import React from "react";
+import React from 'react'
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
         <h1 className="text-5xl font-semibold">
           Привет, я парикмахер <span className="text-[green]">Байыр</span>
         </h1>
-        <div className="text-lg font-medium text-gray-700">
+        <div className="text-lg font-medium text-gray-700 text-right">
           <p>
             Адрес: <span>Абдрахманова</span> <span>142</span>
           </p>
@@ -22,9 +22,8 @@ const About = () => {
           </p>
         </div>
       </div>
-      
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
