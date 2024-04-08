@@ -10,7 +10,7 @@ const About = () => {
         <h1 className="text-5xl font-semibold">
           Привет, я парикмахер <span className="text-[green]">Байыр</span>
         </h1>
-        <div className="text-lg font-medium text-gray-700">
+        <div className="text-lg font-medium text-gray-700 text-right">
           <p>
             Адрес: <span>Абдрахманова</span> <span>142</span>
           </p>
@@ -22,7 +22,6 @@ const About = () => {
           </p>
         </div>
       </div>
-      
     </div>
   );
 };

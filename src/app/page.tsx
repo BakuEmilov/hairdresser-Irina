@@ -7,14 +7,13 @@ import AnotherEntry from "./components/AnotherEntry";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeaderClient />
-      <div>
       <About />
+      <h1 className="text-center text-3xl font-bold mt-20">Запись на прием</h1>
       <WorkingDayCarousel />
       <AnotherEntry />
-      </div>
-    </div>
+    </>
   );
 };
 

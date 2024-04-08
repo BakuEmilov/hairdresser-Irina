@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import * as fns from "date-fns";
+import { ru } from "date-fns/locale";
+
+fns.setDefaultOptions({ locale: ru });
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -21,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main>{children}</main>
+        <main className="container">{children}</main>
       </body>
     </html>
   );
