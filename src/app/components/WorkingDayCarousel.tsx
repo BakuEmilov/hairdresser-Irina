@@ -80,8 +80,6 @@ const WorkingDayCarousel = () => {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-0" />
-      <CarouselNext className="absolute right-0" />
     </Carousel>
   );
 };
