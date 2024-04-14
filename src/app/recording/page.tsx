@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -10,20 +9,14 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import Link from 'next/link'
-import passwordless from '@passwordless-id/connect'
 import { client } from '@passwordless-id/webauthn'
-
-const scope = 'openid avatar email'
+import Link from 'next/link'
 
 const challenge = 'a7c61ef9-dc23-4806-b486-2428938a547e'
 
 const Recording = () => {
-  // const x = await client.isLocalAuthenticator()
-  // console.log(x)
-
   async function onClickSignIn() {
-    const registration = await client.register('Arnaud', challenge)
+    const registration = await client.register('Esen', challenge)
     console.log(registration)
   }
 

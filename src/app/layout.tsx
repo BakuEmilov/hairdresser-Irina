@@ -4,9 +4,6 @@ import "./globals.css";
 import * as fns from "date-fns";
 import { ru } from "date-fns/locale";
 
-import { SessionProvider } from 'next-auth/react'
-import type { AppProps } from 'next/app'
-
 fns.setDefaultOptions({ locale: ru })
 
 const inter = Montserrat({
