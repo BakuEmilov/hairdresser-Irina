@@ -16,7 +16,9 @@ const challenge = 'a7c61ef9-dc23-4806-b486-2428938a547e'
 
 const Recording = () => {
   async function onClickSignIn() {
-    const registration = await client.register('Esen', challenge)
+    const registration = await client.register('Esen', challenge, {
+      authenticatorType: 'local'
+    })
     console.log(registration)
   }
 
